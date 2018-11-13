@@ -1,0 +1,9 @@
+c:\users\gibz\documents\visual studio 2017\Projects\TankstellenPrg\TankstellenPrg\bin\Debug\TankstellenPrg.exe.config
+c:\users\gibz\documents\visual studio 2017\Projects\TankstellenPrg\TankstellenPrg\bin\Debug\TankstellenPrg.exe
+c:\users\gibz\documents\visual studio 2017\Projects\TankstellenPrg\TankstellenPrg\bin\Debug\TankstellenPrg.pdb
+c:\users\gibz\documents\visual studio 2017\Projects\TankstellenPrg\TankstellenPrg\obj\Debug\TankstellenPrg.csprojResolveAssemblyReference.cache
+c:\users\gibz\documents\visual studio 2017\Projects\TankstellenPrg\TankstellenPrg\obj\Debug\TankstellenPrg.Form1.resources
+c:\users\gibz\documents\visual studio 2017\Projects\TankstellenPrg\TankstellenPrg\obj\Debug\TankstellenPrg.Properties.Resources.resources
+c:\users\gibz\documents\visual studio 2017\Projects\TankstellenPrg\TankstellenPrg\obj\Debug\TankstellenPrg.csproj.GenerateResource.Cache
+c:\users\gibz\documents\visual studio 2017\Projects\TankstellenPrg\TankstellenPrg\obj\Debug\TankstellenPrg.exe
+c:\users\gibz\documents\visual studio 2017\Projects\TankstellenPrg\TankstellenPrg\obj\Debug\TankstellenPrg.pdb
