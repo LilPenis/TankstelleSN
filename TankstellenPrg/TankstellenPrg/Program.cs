@@ -8,6 +8,7 @@ namespace TankstellenPrg
 {
     static class Program
     {
+  
         /// <summary>
         /// Der Haupteinstiegspunkt für die Anwendung.
         /// </summary>
@@ -17,7 +18,21 @@ namespace TankstellenPrg
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+           
+            Auto Auto1 = new Auto();
+            Benzin Benzin = new Benzin();
+
+
+
+
+
+
         }
-        //int JoMamaGay = 1;
+
+
+
+
+
+
     }
 }

@@ -58,6 +58,7 @@
             this.S1D.TabIndex = 0;
             this.S1D.Text = "Diesel";
             this.S1D.UseVisualStyleBackColor = true;
+       //     this.S1D.Click += new System.EventHandler(this.S1D_Click);
             // 
             // S1B
             // 
@@ -219,6 +220,7 @@
             this.MinimumSize = new System.Drawing.Size(1255, 796);
             this.Name = "Form1";
             this.Text = "Tankstelle";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.S1.ResumeLayout(false);
             this.S2.ResumeLayout(false);
             this.S3.ResumeLayout(false);
