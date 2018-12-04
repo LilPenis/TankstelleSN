@@ -58,6 +58,30 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Quittung.cs" />
+    <Compile Include="Säule1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Säule1.Designer.cs">
+      <DependentUpon>Säule1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Säule2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Säule2.Designer.cs">
+      <DependentUpon>Säule2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Säule3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Säule3.Designer.cs">
+      <DependentUpon>Säule3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Säule4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Säule4.Designer.cs">
+      <DependentUpon>Säule4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tankstelle.cs" />
     <Compile Include="Tankwart.cs" />
     <Compile Include="Zapfhan.cs" />
@@ -74,6 +98,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Säule1.resx">
+      <DependentUpon>Säule1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Säule2.resx">
+      <DependentUpon>Säule2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Säule3.resx">
+      <DependentUpon>Säule3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Säule4.resx">
+      <DependentUpon>Säule4.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

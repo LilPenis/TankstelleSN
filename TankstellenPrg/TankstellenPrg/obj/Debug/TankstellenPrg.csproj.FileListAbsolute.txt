@@ -16,3 +16,16 @@ C:\Tankstelle\TankstelleSN\TankstellenPrg\TankstellenPrg\obj\Debug\TankstellenPr
 C:\Tankstelle\TankstelleSN\TankstellenPrg\TankstellenPrg\bin\Debug\TankstellenPrg.exe.config
 C:\Tankstelle\TankstelleSN\TankstellenPrg\TankstellenPrg\bin\Debug\TankstellenPrg.exe
 C:\Tankstelle\TankstelleSN\TankstellenPrg\TankstellenPrg\bin\Debug\TankstellenPrg.pdb
+C:\Users\gibz\Documents\GitHub\TankstelleSN\TankstellenPrg\TankstellenPrg\bin\Debug\TankstellenPrg.exe.config
+C:\Users\gibz\Documents\GitHub\TankstelleSN\TankstellenPrg\TankstellenPrg\obj\Debug\TankstellenPrg.exe
+C:\Users\gibz\Documents\GitHub\TankstelleSN\TankstellenPrg\TankstellenPrg\obj\Debug\TankstellenPrg.pdb
+C:\Users\gibz\Documents\GitHub\TankstelleSN\TankstellenPrg\TankstellenPrg\bin\Debug\TankstellenPrg.exe
+C:\Users\gibz\Documents\GitHub\TankstelleSN\TankstellenPrg\TankstellenPrg\bin\Debug\TankstellenPrg.pdb
+C:\Users\gibz\Documents\GitHub\TankstelleSN\TankstellenPrg\TankstellenPrg\obj\Debug\TankstellenPrg.csprojResolveAssemblyReference.cache
+C:\Users\gibz\Documents\GitHub\TankstelleSN\TankstellenPrg\TankstellenPrg\obj\Debug\TankstellenPrg.Form1.resources
+C:\Users\gibz\Documents\GitHub\TankstelleSN\TankstellenPrg\TankstellenPrg\obj\Debug\TankstellenPrg.Properties.Resources.resources
+C:\Users\gibz\Documents\GitHub\TankstelleSN\TankstellenPrg\TankstellenPrg\obj\Debug\TankstellenPrg.csproj.GenerateResource.Cache
+C:\Users\gibz\Documents\GitHub\TankstelleSN\TankstellenPrg\TankstellenPrg\obj\Debug\TankstellenPrg.Säule1.resources
+C:\Users\gibz\Documents\GitHub\TankstelleSN\TankstellenPrg\TankstellenPrg\obj\Debug\TankstellenPrg.Säule2.resources
+C:\Users\gibz\Documents\GitHub\TankstelleSN\TankstellenPrg\TankstellenPrg\obj\Debug\TankstellenPrg.Säule3.resources
+C:\Users\gibz\Documents\GitHub\TankstelleSN\TankstellenPrg\TankstellenPrg\obj\Debug\TankstellenPrg.Säule4.resources
