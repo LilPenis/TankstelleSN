@@ -34,6 +34,10 @@ namespace TankstellenPrg
         private void S2D_Click(object sender, EventArgs e)
         {
             GasPrice = 10;
+            S2B.Enabled = false;
+            S298.Enabled = false;
+            SC2.Enabled = false;
+            SS2.Enabled = true;
             STT2.Start();
         }
 
@@ -48,6 +52,34 @@ namespace TankstellenPrg
         private void SS2_Click(object sender, EventArgs e)
         {
             STT2.Stop();
+            SP2.Visible = true;
+        }
+
+        private void S2B_Click(object sender, EventArgs e)
+        {
+            GasPrice = 10;
+            S2D.Enabled = false;
+            S298.Enabled = false;
+            SC2.Enabled = false;
+            SS2.Enabled = true;
+            STT2.Start();
+        }
+
+        private void S298_Click(object sender, EventArgs e)
+        {
+            GasPrice = 10;
+            S2B.Enabled = false;
+            S2D.Enabled = false;
+            SC2.Enabled = false;
+            SS2.Enabled = true;
+            STT2.Start();
+        }
+
+        private void SP2_Click(object sender, EventArgs e)
+        {
+            Reiceipt Quittung = new Reiceipt();
+            Quittung.Show();
+            Close();
         }
     }
 }

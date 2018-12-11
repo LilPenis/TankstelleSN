@@ -60,6 +60,7 @@
             this.S3B.TabIndex = 10;
             this.S3B.Text = "BleiFrei";
             this.S3B.UseVisualStyleBackColor = true;
+            this.S3B.Click += new System.EventHandler(this.S3B_Click);
             // 
             // S398
             // 
@@ -69,6 +70,7 @@
             this.S398.TabIndex = 11;
             this.S398.Text = "Super98";
             this.S398.UseVisualStyleBackColor = true;
+            this.S398.Click += new System.EventHandler(this.S398_Click);
             // 
             // SFrT3
             // 
@@ -116,6 +118,8 @@
             this.SP3.TabIndex = 25;
             this.SP3.Text = "Bezahlen";
             this.SP3.UseVisualStyleBackColor = true;
+            this.SP3.Visible = false;
+            this.SP3.Click += new System.EventHandler(this.SP3_Click);
             // 
             // SC3
             // 
@@ -129,6 +133,7 @@
             // 
             // SS3
             // 
+            this.SS3.Enabled = false;
             this.SS3.Location = new System.Drawing.Point(111, 205);
             this.SS3.Name = "SS3";
             this.SS3.Size = new System.Drawing.Size(96, 39);

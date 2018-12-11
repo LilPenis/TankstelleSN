@@ -29,3 +29,4 @@ C:\Users\gibz\Documents\GitHub\TankstelleSN\TankstellenPrg\TankstellenPrg\obj\De
 C:\Users\gibz\Documents\GitHub\TankstelleSN\TankstellenPrg\TankstellenPrg\obj\Debug\TankstellenPrg.Säule2.resources
 C:\Users\gibz\Documents\GitHub\TankstelleSN\TankstellenPrg\TankstellenPrg\obj\Debug\TankstellenPrg.Säule3.resources
 C:\Users\gibz\Documents\GitHub\TankstelleSN\TankstellenPrg\TankstellenPrg\obj\Debug\TankstellenPrg.Säule4.resources
+C:\Users\gibz\Documents\GitHub\TankstelleSN\TankstellenPrg\TankstellenPrg\obj\Debug\TankstellenPrg.Reiceipt.resources

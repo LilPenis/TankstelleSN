@@ -50,6 +50,7 @@
             this.S4B.TabIndex = 13;
             this.S4B.Text = "BleiFrei";
             this.S4B.UseVisualStyleBackColor = true;
+            this.S4B.Click += new System.EventHandler(this.S4B_Click);
             // 
             // S498
             // 
@@ -59,6 +60,7 @@
             this.S498.TabIndex = 11;
             this.S498.Text = "Super98";
             this.S498.UseVisualStyleBackColor = true;
+            this.S498.Click += new System.EventHandler(this.S498_Click);
             // 
             // S4D
             // 
@@ -116,6 +118,8 @@
             this.SP4.TabIndex = 29;
             this.SP4.Text = "Bezahlen";
             this.SP4.UseVisualStyleBackColor = true;
+            this.SP4.Visible = false;
+            this.SP4.Click += new System.EventHandler(this.SP4_Click);
             // 
             // SC4
             // 
@@ -129,6 +133,7 @@
             // 
             // SS4
             // 
+            this.SS4.Enabled = false;
             this.SS4.Location = new System.Drawing.Point(111, 205);
             this.SS4.Name = "SS4";
             this.SS4.Size = new System.Drawing.Size(96, 39);

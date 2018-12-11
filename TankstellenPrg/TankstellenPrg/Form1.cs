@@ -30,6 +30,7 @@ namespace TankstellenPrg
 
         private void S2_Click(object sender, EventArgs e)
         {
+
             Säule2 säule2 = new Säule2();
             säule2.Show();
         }

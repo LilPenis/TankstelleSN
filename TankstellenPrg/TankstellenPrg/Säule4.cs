@@ -33,6 +33,10 @@ namespace TankstellenPrg
         private void S4D_Click(object sender, EventArgs e)
         {
             GasPrice = 10;
+            S4B.Enabled = false;
+            S498.Enabled = false;
+            SC4.Enabled = false;
+            SS4.Enabled = true;
             STT4.Start();
         }
 
@@ -47,6 +51,34 @@ namespace TankstellenPrg
         private void SS4_Click(object sender, EventArgs e)
         {
             STT4.Stop();
+            SP4.Visible = true;
+        }
+
+        private void S4B_Click(object sender, EventArgs e)
+        {
+            GasPrice = 10;
+            S4D.Enabled = false;
+            S498.Enabled = false;
+            SC4.Enabled = false;
+            SS4.Enabled = true;
+            STT4.Start();
+        }
+
+        private void S498_Click(object sender, EventArgs e)
+        {
+            GasPrice = 10;
+            S4B.Enabled = false;
+            S4D.Enabled = false;
+            SC4.Enabled = false;
+            SS4.Enabled = true;
+            STT4.Start();
+        }
+
+        private void SP4_Click(object sender, EventArgs e)
+        {
+            Reiceipt Quittung = new Reiceipt();
+            Quittung.Show();
+            Close();
         }
     }
 }
