@@ -20,7 +20,7 @@ namespace TankstellenPrg
 
         int GasPrice = 0;
         int Liter = 0;
-        int Price = 0;
+        public int Price = 0;
 
 
         private void SFr1_Click(object sender, EventArgs e)
@@ -87,9 +87,10 @@ namespace TankstellenPrg
 
         private void SP1_Click(object sender, EventArgs e)
         {
-            //Dynamische Form Gooooooooggggggle
-        
-           
+            
+            Payment Bezahlung = new Payment(Price);
+            Bezahlung.Show();
+            Close();
         }
     }
 }
