@@ -34,8 +34,11 @@ namespace TankstellenPrg
 
         private void S1D_Click(object sender, EventArgs e)
         {
-            
-            GasPrice = 2;
+            GasPrice = 10;
+            S1B.Enabled = false;
+            S198.Enabled = false;
+            SC1.Enabled = false;
+            SS1.Enabled = true;
             STT1.Start();
 
         }
@@ -58,6 +61,35 @@ namespace TankstellenPrg
         private void SS1_Click(object sender, EventArgs e)
         {
             STT1.Stop();
+            SP1.Visible = true;
+        }
+
+        private void S1B_Click(object sender, EventArgs e)
+        {
+            GasPrice = 10;
+            S1D.Enabled = false;
+            S198.Enabled = false;
+            SC1.Enabled = false;
+            SS1.Enabled = true;
+            STT1.Start();
+        }
+
+        private void S198_Click(object sender, EventArgs e)
+        {
+            GasPrice = 10;
+            S1B.Enabled = false;
+            S1D.Enabled = false;
+            SC1.Enabled = false;
+            SS1.Enabled = true;
+            STT1.Start();
+        }
+
+        private void SP1_Click(object sender, EventArgs e)
+        {
+            //Dynamische Form Gooooooooggggggle
+            Payment Bezahlung = new Payment();
+            Bezahlung.Show();
+            Close();
         }
     }
 }

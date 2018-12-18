@@ -55,26 +55,26 @@
     </Compile>
     <Compile Include="Kasse.cs" />
     <Compile Include="Kunde.cs" />
+    <Compile Include="Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment.Designer.cs">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Quittung.cs" />
+    <Compile Include="Receipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receipt.Designer.cs">
+      <DependentUpon>Receipt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Säule1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Säule1.Designer.cs">
       <DependentUpon>Säule1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Säule2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Säule2.Designer.cs">
-      <DependentUpon>Säule2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Säule3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Säule3.Designer.cs">
-      <DependentUpon>Säule3.cs</DependentUpon>
     </Compile>
     <Compile Include="Tankstelle.cs" />
     <Compile Include="Tankwart.cs" />
@@ -82,6 +82,9 @@
     <Compile Include="Zapfsäule.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -94,12 +97,6 @@
     </Compile>
     <EmbeddedResource Include="Säule1.resx">
       <DependentUpon>Säule1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Säule2.resx">
-      <DependentUpon>Säule2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Säule3.resx">
-      <DependentUpon>Säule3.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

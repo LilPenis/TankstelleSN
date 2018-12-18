@@ -26,24 +26,32 @@ namespace TankstellenPrg
         private void S1_Click(object sender, EventArgs e)
         {
             Säule1 säule1 = new Säule1();
+            säule1.Text = "Säule1";
             säule1.Show();
         }
 
         private void S2_Click(object sender, EventArgs e)
         {
-            Säule2 säule2 = new Säule2();
+
+            //Säule2 säule2 = new Säule2();
+            //säule2.Show();
+            Säule1 säule2 = new Säule1();
+            säule2.Text = "Säule2";
             säule2.Show();
         }
 
         private void S3_Click(object sender, EventArgs e)
         {
-            Säule3 säule3 = new Säule3();
+            Säule1 säule3 = new Säule1();
+            säule3.Text = "Säule3";
             säule3.Show();
         }
 
         private void S4_Click(object sender, EventArgs e)
         {
-        
+            Säule1 säule4 = new Säule1();
+            säule4.Text = "Säule4";
+            säule4.Show();
         }
 
         private void CBM_Click(object sender, EventArgs e)

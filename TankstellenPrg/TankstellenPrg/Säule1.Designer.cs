@@ -50,6 +50,7 @@
             this.S1B.TabIndex = 4;
             this.S1B.Text = "BleiFrei";
             this.S1B.UseVisualStyleBackColor = true;
+            this.S1B.Click += new System.EventHandler(this.S1B_Click);
             // 
             // S1D
             // 
@@ -69,6 +70,7 @@
             this.S198.TabIndex = 5;
             this.S198.Text = "Super98";
             this.S198.UseVisualStyleBackColor = true;
+            this.S198.Click += new System.EventHandler(this.S198_Click);
             // 
             // SL1
             // 
@@ -111,6 +113,7 @@
             // 
             // SS1
             // 
+            this.SS1.Enabled = false;
             this.SS1.Location = new System.Drawing.Point(111, 205);
             this.SS1.Name = "SS1";
             this.SS1.Size = new System.Drawing.Size(96, 39);
@@ -137,6 +140,8 @@
             this.SP1.TabIndex = 12;
             this.SP1.Text = "Bezahlen";
             this.SP1.UseVisualStyleBackColor = true;
+            this.SP1.Visible = false;
+            this.SP1.Click += new System.EventHandler(this.SP1_Click);
             // 
             // STT1
             // 
