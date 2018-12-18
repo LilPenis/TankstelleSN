@@ -83,8 +83,9 @@ namespace TankstellenPrg
 
         private void SP1_Click(object sender, EventArgs e)
         {
-            Reiceipt Quittung = new Reiceipt();
-            Quittung.Show();
+            //Dynamische Form Gooooooooggggggle
+            Payment Bezahlung = new Payment();
+            Bezahlung.Show();
             Close();
         }
     }

@@ -26,7 +26,4 @@ C:\Users\gibz\Documents\GitHub\TankstelleSN\TankstellenPrg\TankstellenPrg\obj\De
 C:\Users\gibz\Documents\GitHub\TankstelleSN\TankstellenPrg\TankstellenPrg\obj\Debug\TankstellenPrg.Properties.Resources.resources
 C:\Users\gibz\Documents\GitHub\TankstelleSN\TankstellenPrg\TankstellenPrg\obj\Debug\TankstellenPrg.csproj.GenerateResource.Cache
 C:\Users\gibz\Documents\GitHub\TankstelleSN\TankstellenPrg\TankstellenPrg\obj\Debug\TankstellenPrg.Säule1.resources
-C:\Users\gibz\Documents\GitHub\TankstelleSN\TankstellenPrg\TankstellenPrg\obj\Debug\TankstellenPrg.Säule2.resources
-C:\Users\gibz\Documents\GitHub\TankstelleSN\TankstellenPrg\TankstellenPrg\obj\Debug\TankstellenPrg.Säule3.resources
-C:\Users\gibz\Documents\GitHub\TankstelleSN\TankstellenPrg\TankstellenPrg\obj\Debug\TankstellenPrg.Säule4.resources
-C:\Users\gibz\Documents\GitHub\TankstelleSN\TankstellenPrg\TankstellenPrg\obj\Debug\TankstellenPrg.Reiceipt.resources
+C:\Users\gibz\Documents\GitHub\TankstelleSN\TankstellenPrg\TankstellenPrg\obj\Debug\TankstellenPrg.Payment.resources

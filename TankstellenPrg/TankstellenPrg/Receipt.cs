@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TankstellenPrg
 {
-    public partial class Reiceipt : Form
+    public partial class Receipt : Form
     {
-        public Reiceipt()
+        public Receipt()
         {
             InitializeComponent();
         }
