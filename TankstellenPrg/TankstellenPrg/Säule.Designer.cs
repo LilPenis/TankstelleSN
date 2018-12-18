@@ -1,6 +1,6 @@
 ﻿namespace TankstellenPrg
 {
-    partial class Säule1
+    partial class Säule
     {
         /// <summary>
         /// Required designer variable.

@@ -10,13 +10,14 @@ using System.Windows.Forms;
 
 namespace TankstellenPrg
 {
-    public partial class Säule1 : Form
+    public partial class Säule : Form
     {//Diese Säule fertig machen und Swag getten
         
-        public Säule1()
+        public Säule(Zapfsäule zapfsäule, Tankstelle tankstelle)
         {
             InitializeComponent();
         }
+
         int GasPrice = 0;
         int Liter = 0;
         public int Price = 0;

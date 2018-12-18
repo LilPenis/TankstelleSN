@@ -5,9 +5,9 @@ using TankstellenPrg;
 public class Benzin 
 
 {
-    int Id { get; set; }
-    double KostenproLiter { get; set; }
-    string Bezeichnung { get; set; }
+    public int Id { get; set; }
+    public double KostenproLiter { get; set; }
+    public string Bezeichnung { get; set; }
 
     public Benzin(int Id, string Bezeichnung,double Preis)
     {

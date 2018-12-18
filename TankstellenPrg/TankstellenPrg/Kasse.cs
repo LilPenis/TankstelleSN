@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class Kasse : Zapfsäule
+public class Kasse 
 {
 	public int Id { set; get; }
     public int Zapfsäule { get; }
