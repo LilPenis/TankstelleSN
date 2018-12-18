@@ -76,12 +76,6 @@
     <Compile Include="Säule3.Designer.cs">
       <DependentUpon>Säule3.cs</DependentUpon>
     </Compile>
-    <Compile Include="Säule4.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Säule4.Designer.cs">
-      <DependentUpon>Säule4.cs</DependentUpon>
-    </Compile>
     <Compile Include="Tankstelle.cs" />
     <Compile Include="Tankwart.cs" />
     <Compile Include="Zapfhan.cs" />
@@ -106,9 +100,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Säule3.resx">
       <DependentUpon>Säule3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Säule4.resx">
-      <DependentUpon>Säule4.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

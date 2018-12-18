@@ -11,7 +11,8 @@ using System.Windows.Forms;
 namespace TankstellenPrg
 {
     public partial class Säule1 : Form
-    {
+    {//Diese Säule fertig machen und Swag getten
+        
         public Säule1()
         {
             InitializeComponent();
@@ -19,6 +20,7 @@ namespace TankstellenPrg
         int GasPrice = 0;
         int Liter = 0;
         int Price = 0;
+
 
         private void SFr1_Click(object sender, EventArgs e)
         {
@@ -32,10 +34,12 @@ namespace TankstellenPrg
 
         private void S1D_Click(object sender, EventArgs e)
         {
-            GasPrice = 10;
+            
+            GasPrice = 2;
             STT1.Start();
 
         }
+     
 
         private void Säule1_Load(object sender, EventArgs e)
         {

@@ -2,28 +2,36 @@
 using System.Collections.Generic;
 using TankstellenPrg;
 
-public class Benzin : Zapfhan
+public class Benzin 
+
 {
     int Id { get; set; }
-    int KostenproLiter { get; set; }
+    double KostenproLiter { get; set; }
     string Bezeichnung { get; set; }
+
+    public Benzin(int Id, string Bezeichnung,double Preis)
+    {
+        setId(Id);
+        setBezeichnung(Bezeichnung);
+        setKostenPproLiter(Preis);
+    }
 
     public int getId()
     {
         return this.Id;
     }
 
-    public void setMyId(int value)
+    public void setId(int value)
     {
         this.Id = value;
     }
 
-    public int getKostenproLiter()
+    public double getKostenproLiter()
     {
         return this.KostenproLiter;
     }
 
-    public void setKostenPproLiter(int value)
+    public void setKostenPproLiter(double value)
     {
         this.KostenproLiter = value;
     }

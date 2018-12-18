@@ -19,8 +19,12 @@ namespace TankstellenPrg
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
            
-            Auto Auto1 = new Auto();
-            Benzin Benzin = new Benzin();
+            //Eruezgt Benzins
+            
+
+
+
+
 
 
 
@@ -28,6 +32,11 @@ namespace TankstellenPrg
 
 
         }
+      
+
+
+
+
 
 
 

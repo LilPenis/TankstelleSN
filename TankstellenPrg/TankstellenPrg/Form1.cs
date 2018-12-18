@@ -12,6 +12,7 @@ namespace TankstellenPrg
 {
     public partial class Form1 : Form
     {
+        Tankstelle tankstelle = new Tankstelle();
         public Form1()
         {
             InitializeComponent();
@@ -42,8 +43,7 @@ namespace TankstellenPrg
 
         private void S4_Click(object sender, EventArgs e)
         {
-            Säule4 säule4 = new Säule4();
-            säule4.Show();
+        
         }
 
         private void CBM_Click(object sender, EventArgs e)
