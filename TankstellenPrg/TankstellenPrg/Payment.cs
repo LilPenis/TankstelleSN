@@ -22,9 +22,9 @@ namespace TankstellenPrg
             
         private void PB_Click(object sender, EventArgs e)
         {
-            Receipt quittung = new Receipt();
+            Receipt quittungg = new Receipt();
             Close();
-            quittung.Show();
+            quittungg.Show();
 
         }
 
