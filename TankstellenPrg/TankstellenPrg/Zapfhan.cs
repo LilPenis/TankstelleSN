@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TankstellenPrg
 {
-    public class Zapfhan : Zapfsäule
+    public class Zapfhan 
     {
         public int Id { get; set; }
         public int Lieterzahl;

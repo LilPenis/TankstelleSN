@@ -25,33 +25,42 @@ namespace TankstellenPrg
 
         private void S1_Click(object sender, EventArgs e)
         {
-            Säule1 säule1 = new Säule1();
-            säule1.Text = "Säule1";
-            säule1.Show();
+            
+            Zapfsäule Zapfsäule1 = tankstelle.säulen.Find(t => t.Id == 1);
+            Säule säule1 = new Säule(Zapfsäule1,tankstelle);
         }
 
         private void S2_Click(object sender, EventArgs e)
         {
+            Benzin diesel = tankstelle.benzinSorten.Find(t => t.Bezeichnung == "Diesel");
+            Benzin bleiFrei = tankstelle.benzinSorten.Find(t => t.Bezeichnung == "Bleifrei");
+            Benzin super98 = tankstelle.benzinSorten.Find(t => t.Bezeichnung == "Super98");
+            Zapfsäule Zapfsäule2 = tankstelle.säulen.Find(t => t.Id == 2);
+            Säule säule1 = new Säule(Zapfsäule2, tankstelle);
 
-            //Säule2 säule2 = new Säule2();
-            //säule2.Show();
-            Säule1 säule2 = new Säule1();
-            säule2.Text = "Säule2";
-            säule2.Show();
+
         }
 
         private void S3_Click(object sender, EventArgs e)
         {
-            Säule1 säule3 = new Säule1();
-            säule3.Text = "Säule3";
-            säule3.Show();
+            Benzin diesel = tankstelle.benzinSorten.Find(t => t.Bezeichnung == "Diesel");
+            Benzin bleiFrei = tankstelle.benzinSorten.Find(t => t.Bezeichnung == "Bleifrei");
+            Benzin super98 = tankstelle.benzinSorten.Find(t => t.Bezeichnung == "Super98");
+            Zapfsäule Zapfsäule3 = tankstelle.säulen.Find(t => t.Id == 3);
+            Säule säule1 = new Säule(Zapfsäule3, tankstelle);
+
+
         }
 
         private void S4_Click(object sender, EventArgs e)
         {
-            Säule1 säule4 = new Säule1();
-            säule4.Text = "Säule4";
-            säule4.Show();
+            Benzin diesel = tankstelle.benzinSorten.Find(t => t.Bezeichnung == "Diesel");
+            Benzin bleiFrei = tankstelle.benzinSorten.Find(t => t.Bezeichnung == "Bleifrei");
+            Benzin super98 = tankstelle.benzinSorten.Find(t => t.Bezeichnung == "Super98");
+            Zapfsäule Zapfsäule4= tankstelle.säulen.Find(t => t.Id == 4);
+            Säule säule1 = new Säule(Zapfsäule4, tankstelle);
+
+
         }
 
         private void CBM_Click(object sender, EventArgs e)

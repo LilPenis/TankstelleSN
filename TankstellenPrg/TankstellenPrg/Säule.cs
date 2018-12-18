@@ -10,13 +10,14 @@ using System.Windows.Forms;
 
 namespace TankstellenPrg
 {
-    public partial class Säule1 : Form
+    public partial class Säule : Form
     {//Diese Säule fertig machen und Swag getten
         
-        public Säule1()
+        public Säule(Zapfsäule zapfsäule, Tankstelle tankstelle)
         {
             InitializeComponent();
         }
+
         int GasPrice = 0;
         int Liter = 0;
         int Price = 0;
@@ -87,9 +88,8 @@ namespace TankstellenPrg
         private void SP1_Click(object sender, EventArgs e)
         {
             //Dynamische Form Gooooooooggggggle
-            Payment Bezahlung = new Payment();
-            Bezahlung.Show();
-            Close();
+        
+           
         }
     }
 }
