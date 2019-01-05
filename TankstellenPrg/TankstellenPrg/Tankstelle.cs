@@ -13,9 +13,11 @@ public class Tankstelle
     {
         Adresse = "HarlemTankstelle";
         Id = 1;
+        benzinSorten = CreateBenzinObject();
+        säulen = CreateSaule();
     }
     public List<Benzin> CreateBenzinObject()
-    {
+   {
         List<Benzin> benzinSorten = new List<Benzin>();
         benzinSorten.Add(new Benzin(1,"Diesel",0.98));
         benzinSorten.Add(new Benzin(2,"Bleifrei",0.8));

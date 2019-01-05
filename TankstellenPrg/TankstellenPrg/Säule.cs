@@ -11,16 +11,31 @@ using System.Windows.Forms;
 namespace TankstellenPrg
 {
     public partial class Säule : Form
-    {//Diese Säule fertig machen und Swag getten
-        
+    {
+
+        double gasPriceDiesel;
+        double gasPriceBleiFrei;
+        double gasPriceSuper98;
+        int Liter = 0;
+        public double Price = 0;
+        int identifier = 0;
+
         public Säule(Zapfsäule zapfsäule, Tankstelle tankstelle)
         {
             InitializeComponent();
+            Benzin diesel = tankstelle.benzinSorten.Find(t => t.Bezeichnung == "Diesel");
+            Benzin bleiFrei = tankstelle.benzinSorten.Find(t => t.Bezeichnung == "Bleifrei");
+            Benzin super98 = tankstelle.benzinSorten.Find(t => t.Bezeichnung == "Super98");
+            gasPriceDiesel = diesel.getKostenproLiter();
+            gasPriceBleiFrei = bleiFrei.getKostenproLiter();
+            gasPriceSuper98 = super98.getKostenproLiter();
+
+
         }
 
-        int GasPrice = 0;
-        int Liter = 0;
-        public int Price = 0;
+        double GasPrice;
+        
+        
 
 
         private void SFr1_Click(object sender, EventArgs e)
@@ -35,7 +50,8 @@ namespace TankstellenPrg
 
         private void S1D_Click(object sender, EventArgs e)
         {
-            GasPrice = 10;
+
+            identifier = 1;
             S1B.Enabled = false;
             S198.Enabled = false;
             SC1.Enabled = false;
@@ -53,8 +69,24 @@ namespace TankstellenPrg
 
         private void STT1_Tick(object sender, EventArgs e)
         {
+            switch (identifier)
+            {
+                case 1:
+                    GasPrice = gasPriceDiesel;
+                    identifier = 0;
+                    break;
+                case 2:
+                    GasPrice = gasPriceBleiFrei;
+                    identifier = 0;
+                    break;
+                case 3:
+                    GasPrice = gasPriceSuper98;
+                    identifier = 0;
+                    break;
+                    
+            }
             Liter++;
-            Price += GasPrice;
+            Price += gasPriceDiesel;
             SLT1.Text = Convert.ToString(Liter);
             SFrT1.Text = Convert.ToString(Price);
         }
@@ -67,7 +99,7 @@ namespace TankstellenPrg
 
         private void S1B_Click(object sender, EventArgs e)
         {
-            GasPrice = 10;
+            identifier = 2;
             S1D.Enabled = false;
             S198.Enabled = false;
             SC1.Enabled = false;
@@ -77,7 +109,7 @@ namespace TankstellenPrg
 
         private void S198_Click(object sender, EventArgs e)
         {
-            GasPrice = 10;
+            identifier = 3;
             S1B.Enabled = false;
             S1D.Enabled = false;
             SC1.Enabled = false;
@@ -85,12 +117,15 @@ namespace TankstellenPrg
             STT1.Start();
         }
 
+
+        
+
         private void SP1_Click(object sender, EventArgs e)
         {
             
-            Payment Bezahlung = new Payment(Price);
-            Bezahlung.Show();
-            Close();
+            //Payment Bezahlung = new Payment(Price);
+            //Bezahlung.Show();
+            //Close();
         }
     }
 }
