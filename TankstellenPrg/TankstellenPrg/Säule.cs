@@ -123,9 +123,9 @@ namespace TankstellenPrg
         private void SP1_Click(object sender, EventArgs e)
         {
             
-            //Payment Bezahlung = new Payment(Price);
-            //Bezahlung.Show();
-            //Close();
+            Payment Bezahlung = new Payment(Price);
+            Bezahlung.Show();
+            Close();
         }
     }
 }

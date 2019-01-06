@@ -29,7 +29,7 @@ namespace TankstellenPrg
             
             Zapfsäule Zapfsäule1 = tankstelle.säulen.Find(t => t.Id == 1);
             Säule säule1 = new Säule(Zapfsäule1, tankstelle);
-            säule1.ShowDialog();
+            säule1.Show();
 
         }
 
@@ -38,7 +38,7 @@ namespace TankstellenPrg
             
             Zapfsäule Zapfsäule2 = tankstelle.säulen.Find(t => t.Id == 2);
             Säule säule2 = new Säule(Zapfsäule2,tankstelle);
-            säule2.ShowDialog();
+            säule2.Show();
             
 
 
@@ -49,7 +49,7 @@ namespace TankstellenPrg
            
             Zapfsäule Zapfsäule3 = tankstelle.säulen.Find(t => t.Id == 3);
             Säule säule3 = new Säule(Zapfsäule3, tankstelle);
-            säule3.ShowDialog();
+            säule3.Show();
 
 
         }
@@ -59,7 +59,7 @@ namespace TankstellenPrg
            
             Zapfsäule Zapfsäule4 = tankstelle.säulen.Find(t => t.Id == 4);
             Säule säule4 = new Säule(Zapfsäule4, tankstelle);
-            säule4.ShowDialog();
+            säule4.Show();
 
 
         }
