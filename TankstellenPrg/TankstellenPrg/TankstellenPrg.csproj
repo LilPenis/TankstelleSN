@@ -76,6 +76,7 @@
     <Compile Include="Säule.Designer.cs">
       <DependentUpon>Säule.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tank.cs" />
     <Compile Include="Tankstelle.cs" />
     <Compile Include="Tankwart.cs" />
     <Compile Include="Zapfhan.cs" />
@@ -95,6 +96,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Receipt.resx">
+      <DependentUpon>Receipt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Säule.resx">
       <DependentUpon>Säule.cs</DependentUpon>
     </EmbeddedResource>

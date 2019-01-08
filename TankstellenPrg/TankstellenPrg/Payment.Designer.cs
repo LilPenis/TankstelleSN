@@ -52,6 +52,7 @@
             this.WasBezahl.ReadOnly = true;
             this.WasBezahl.Size = new System.Drawing.Size(141, 25);
             this.WasBezahl.TabIndex = 0;
+            this.WasBezahl.TextChanged += new System.EventHandler(this.WasBezahl_TextChanged);
             // 
             // BezahlBetrag
             // 

@@ -9,7 +9,7 @@ namespace TankstellenPrg
     public class Zapfhan 
     {
         public int Id { get; set; }
-        public int Lieterzahl;
+        public double Lieterzahl;
         public bool bockiert;
 
         public int getId()
@@ -21,7 +21,7 @@ namespace TankstellenPrg
         {
             this.Id = value;
         }
-        public int getLieterzahl()
+        public double getLieterzahl()
         {
             return this.Lieterzahl;
         }

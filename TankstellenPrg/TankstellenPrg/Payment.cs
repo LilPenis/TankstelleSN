@@ -12,11 +12,20 @@ namespace TankstellenPrg
     {
         public partial class Payment : Form
         {
-            double Price;
-            int MyPay;
-            public Payment(double Price)
+        double Price;
+        int MyPay;
+        double Liter;
+        double TankBestandDiesel;
+        double TankBestandBleifrei;
+        double TankBestandSuper98;
+        Tankstelle tankstelle;
+
+            public Payment(double Price, double Liter, Tankstelle tankstelle)
             {
                 this.Price = Price;
+                this.Liter = Liter;
+            this.tankstelle = tankstelle;
+                
                 InitializeComponent();
             }
 
@@ -111,10 +120,74 @@ namespace TankstellenPrg
 
             private void PB_Click_1(object sender, EventArgs e)
             {
-                Receipt quittungg = new Receipt();
-                Close();
+            double Rückgel = GetRückgeld(MyPay, Price);
+                Receipt quittungg = new Receipt(Price,Liter,MyPay,tankstelle);
                 quittungg.Show();
+                Close();
+                
             }
+
+        private double GetRückgeld(int MyPay,double Price)
+        {
+            double rückgeld = Price - MyPay;
+            while (rückgeld > 0)
+            {
+                if (rückgeld > 100)
+                {
+
+                }
+                else if(rückgeld > 50)
+                {
+
+                }
+                else if (rückgeld > 20)
+                {
+
+                }
+                else if (rückgeld > 10)
+                {
+
+                }
+                else if (rückgeld > 5)
+                {
+
+                }
+                else if (rückgeld > 2)
+                {
+
+                }
+                else if (rückgeld > 1)
+                {
+
+                }
+                else if (rückgeld > 0.5)
+                {
+
+                }
+                else if (rückgeld > 0.2)
+                {
+
+                }
+                else if (rückgeld > 0.1)
+                {
+
+                }
+                else
+                {
+                    
+                }
+                
+
+            }
+            return rückgeld;
+        }
+    
+
+
+        private void WasBezahl_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 
