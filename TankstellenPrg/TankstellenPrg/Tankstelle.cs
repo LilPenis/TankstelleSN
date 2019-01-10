@@ -7,8 +7,8 @@ using System.IO;
 
 public class Tankstelle
 {
-	
-     string fileName = "hi";
+
+     string fileName = @"C:\Users\gibz\Documents\Nikita\Gespeochertes.txt";
      public int Id;
      public string Adresse;
      public List<Benzin> benzinSorten;
@@ -17,9 +17,34 @@ public class Tankstelle
     
     //Tankstelle Hat alles ist Gottes Klasse
     public Tankstelle()
-    {
+    {//Ich eruüge s File jetzt Immmer
+        //Nur den erzüge wens nonig exsistiert sust lese
+        BinaryFormatter bf = new BinaryFormatter();
+        
+        if (File.Exists(fileName))
+        {
+            FileStream fs = new FileStream(fileName, FileMode.OpenOrCreate);
+            this.benzinSorten = ReadBenzin(bf,fs);
+            this.säulen = ReadSäule(bf,fs);
+            this.tanks = ReadTank(bf,fs);
+            fs.Close();
+        }
+        else
+        {
+            FileStream fs = new FileStream(fileName, FileMode.OpenOrCreate);
+            this.benzinSorten = CreateBenzinObject();
+            this.säulen = CreateSaule();
+            this.tanks = CreateTanks();
+            SpeichertBenzins(benzinSorten,bf,fs);
+            SpeichertSäulen(säulen,bf,fs);
+            SpeichertTanks(tanks,bf,fs);
+            fs.Close();
+
+        }
         Adresse = "HarlemTankstelle";
         Id = 1;
+
+        //Abfrage ob File Exsistiert
         benzinSorten = CreateBenzinObject();
         säulen = CreateSaule();
         tanks = CreateTanks();
@@ -50,23 +75,57 @@ public class Tankstelle
         tanks.Add(new Tank(2000, "Super98Tank"));
         return tanks;
     }
-    public void SpeichertBenzins(List<Benzin> benzinSorten)
+    public void SpeichertBenzins(List<Benzin> benzinSorten, BinaryFormatter bf,FileStream fs)
     {
-        BinaryFormatter bf = new BinaryFormatter();
-        FileStream fs = new FileStream(fileName, FileMode.Create);
+
+      
         bf.Serialize(fs, benzinSorten);
+     
     }
-    public void SpeichertTanks(List<Tank> tanks)
+    public void SpeichertTanks(List<Tank> tanks, BinaryFormatter bf, FileStream fs)
     {
-        BinaryFormatter bf = new BinaryFormatter();
-        FileStream fs = new FileStream(fileName, FileMode.Create);
+
+
         bf.Serialize(fs, tanks);
+  
     }
-    public void SpeichertSäulen(List<Zapfsäule> zapfhähne)
+    public void SpeichertSäulen(List<Zapfsäule> zapfhähne, BinaryFormatter bf, FileStream fs)
     {
-        BinaryFormatter bf = new BinaryFormatter();
-        FileStream fs = new FileStream(fileName, FileMode.Create);
+
+
         bf.Serialize(fs, zapfhähne);
+  
+    }
+    public List<Tank> ReadTank(BinaryFormatter bf, FileStream fs)
+    {
+
+        
+        List<Tank> tanks = (List<Tank>)bf.Deserialize(fs);
+ 
+        return tanks;
+
+
+    }
+    public List<Benzin> ReadBenzin(BinaryFormatter bf, FileStream fs)
+    {
+
+
+
+        List<Benzin> benzinListe = (List<Benzin>)bf.Deserialize(fs);
+     
+        return benzinListe;
+
+
+    }
+    public List<Zapfsäule> ReadSäule(BinaryFormatter bf, FileStream fs)
+    {
+
+        
+        List<Zapfsäule> säuleList = (List<Zapfsäule>)bf.Deserialize(fs);
+       
+        return säuleList;
+
+
     }
 
 

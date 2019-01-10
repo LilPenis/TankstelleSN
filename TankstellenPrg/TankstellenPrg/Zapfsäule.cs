@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TankstellenPrg;
 
+[Serializable]
 public class Zapfsäule
 {
 
