@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class Quittung : Kasse
+public class Quittung
 {
     public int BezogenerTreibstoff { get; }
     public int Lieterzahl { get; }

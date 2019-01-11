@@ -18,9 +18,10 @@ namespace TankstellenPrg
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Stellt Tankstellen Form sichtbar da
             Application.Run(new Form1());
            
-            //Eruezgt Benzins
+           
             
 
 

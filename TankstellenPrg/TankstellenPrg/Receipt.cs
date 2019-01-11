@@ -15,37 +15,38 @@ namespace TankstellenPrg
 {
     public partial class Receipt : Form
     {
+        //properties
         string tankFile = @"C:\Tankstelle\TankstelleSN\TankstellenPrg\Tank.txt";
         double Price;
         double Liter;
-        double MyPay;
+        double MeineBezahlung;
         double Change;
         double TankBestandDiesel;
         double TankbestandBleifrei;
         double TankBestandSuper98;
-        
+
         Tankstelle tankstelle;
         List<Tank> Tanks;
 
-      
-            
-        public Receipt(double Price, double Liter, double MyPay,Tankstelle tankstelle)
+
+        //Konstruktor
+        public Receipt(double Price, double Liter, double meineBezahlung, Tankstelle tankstelle)
         {
 
-            this.Price = Math.Round(Price,1);
+            this.Price = Math.Round(Price, 1);
             this.Liter = Liter;
-            this.MyPay = Math.Round(MyPay, 1);
-            Tank dieselTank = tankstelle.tanks.Find(t => t.Bezeichnung == "DieselTank");
-            Tank super98Tank = tankstelle.tanks.Find(t => t.Bezeichnung == "Super98Tank");
-            Tank bleiferiTank = tankstelle.tanks.Find(t => t.Bezeichnung == "BleifreiTank");
+            this.MeineBezahlung = Math.Round(meineBezahlung, 1);
+            Tank dieselTank = tankstelle.Tanks.Find(t => t.Bezeichnung == "DieselTank");
+            Tank super98Tank = tankstelle.Tanks.Find(t => t.Bezeichnung == "Super98Tank");
+            Tank bleiferiTank = tankstelle.Tanks.Find(t => t.Bezeichnung == "BleifreiTank");
             this.TankBestandDiesel = dieselTank.GetLiterBestand();
             this.TankbestandBleifrei = bleiferiTank.GetLiterBestand();
             this.TankBestandSuper98 = super98Tank.GetLiterBestand();
-            this.Tanks = tankstelle.tanks;
+            this.Tanks = tankstelle.Tanks;
             this.tankstelle = tankstelle;
-            
 
-          
+
+
 
 
             InitializeComponent();
@@ -55,36 +56,40 @@ namespace TankstellenPrg
         {
             bezogeneLiter.Text = Convert.ToString(Liter);
             Betrag.Text = Convert.ToString(Price);
-            Rückgeld.Text = Convert.ToString(GetRückgeld(Price, MyPay));
-            Bezahlt.Text = Convert.ToString(MyPay);
+            Rückgeld.Text = Convert.ToString(GetRückgeld(Price, MeineBezahlung));
+            Bezahlt.Text = Convert.ToString(MeineBezahlung);
             DieslTank.Text = Convert.ToString(TankBestandDiesel);
             BleifreiTank.Text = Convert.ToString(TankbestandBleifrei);
             Super98Tank.Text = Convert.ToString(TankBestandSuper98);
-            GetAnzahlRückgeld(MyPay, Price);
+            GetAnzahlRückgeld(MeineBezahlung, Price);
 
         }
-        private double GetRückgeld(double Price,double MyPay)
+        //Ermittelt Rückgeld
+        private double GetRückgeld(double Price, double MyPay)
         {
 
             this.Change = MyPay - Price;
             return Change;
         }
-
-        private void Betrag_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        //setzt anzeigen Züruck nach dem die Kasse gebraucht wurde
         private void schliessen_Click(object sender, EventArgs e)
         {
             BinaryFormatter bf = new BinaryFormatter();
             FileStream fs2 = new FileStream(tankFile, FileMode.OpenOrCreate);
             bf.Serialize(fs2, Tanks);
-
-
+            Hundert.Text = null;
+            Fünfzig.Text = null;
+            Zwanzig.Text = null;
+            Zehner.Text = null;
+            Fünfer.Text = null;
+            Zweier.Text = null;
+            Einer.Text = null;
+            NullFünfziger.Text = null;
+            NullEiner.Text = null;
             Close();
 
         }
+        //Ermittelt wie viel Rückgeld gegeben werden muss
         private double GetAnzahlRückgeld(double MyPay, double Price)
         {
             int hundert = 0;
@@ -98,7 +103,6 @@ namespace TankstellenPrg
             int nullfünf = 0;
             double rückgeld = 0;
             rückgeld = MyPay - Price;
-            //rückgeld = Math.Round(rückgeld, 1);
             while (rückgeld > 0.1)
             {
                 if (rückgeld > 100)
@@ -164,6 +168,7 @@ namespace TankstellenPrg
             }
             return rückgeld;
         }
+
 
     }
 }

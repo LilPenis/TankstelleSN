@@ -103,7 +103,6 @@
             this.MinimumSize = new System.Drawing.Size(1024, 768);
             this.Name = "Form1";
             this.Text = "Tankstelle";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
@@ -112,8 +111,8 @@
         private System.Windows.Forms.Button S1;
         private System.Windows.Forms.Button S2;
         private System.Windows.Forms.Button S3;
-        private System.Windows.Forms.Button S4;
         private System.Windows.Forms.Button CBM;
+        public System.Windows.Forms.Button S4;
     }
 }
 

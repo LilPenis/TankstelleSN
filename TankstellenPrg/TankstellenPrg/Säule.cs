@@ -12,13 +12,10 @@ namespace TankstellenPrg
 {
     public partial class Säule : Form
     {
-
-        double gasPriceDiesel;
-        double gasPriceBleiFrei;
-        double gasPriceSuper98;
-        double Liter = 0.0;
-        public double Price = 0;
-        int identifier = 0;
+        //properties
+        double BenzinPreisDiesel;
+        double BenzinPreisBleifrei;
+        double BenzinPreisSuper98;
         double TankBestabdDiesel;
         double TankBestabSuper98;
         double TankBestabdBleifrei;
@@ -26,44 +23,41 @@ namespace TankstellenPrg
         Tank dieselTank;
         Tank super98Tank;
         Tank bleifreiTank;
-
+        //Classen Variablen
+        double liter = 0.0;
+        public double preis = 0;
+        int identifier = 0;
+        //Konstruktor der Säule Holt Objekte welche Gebraucht werden und weist sie richtig zu
         public Säule(Zapfsäule zapfsäule, Tankstelle tankstelle)
         {
             InitializeComponent();
-            Benzin diesel = tankstelle.benzinSorten.Find(t => t.Bezeichnung == "Diesel");
-            Benzin bleiFrei = tankstelle.benzinSorten.Find(t => t.Bezeichnung == "Bleifrei");
-            Benzin super98 = tankstelle.benzinSorten.Find(t => t.Bezeichnung == "Super98");
-            dieselTank = tankstelle.tanks.Find(t => t.Bezeichnung == "DieselTank");
-            super98Tank = tankstelle.tanks.Find(t => t.Bezeichnung == "Super98Tank");
-            bleifreiTank = tankstelle.tanks.Find(t => t.Bezeichnung == "BleifreiTank");
-            gasPriceDiesel = diesel.getKostenproLiter();
-            gasPriceBleiFrei = bleiFrei.getKostenproLiter();
-            gasPriceSuper98 = super98.getKostenproLiter();
+            Benzin diesel = tankstelle.BenzinSorten.Find(t => t.Bezeichnung == "Diesel");
+            Benzin bleiFrei = tankstelle.BenzinSorten.Find(t => t.Bezeichnung == "Bleifrei");
+            Benzin super98 = tankstelle.BenzinSorten.Find(t => t.Bezeichnung == "Super98");
+            dieselTank = tankstelle.Tanks.Find(t => t.Bezeichnung == "DieselTank");
+            super98Tank = tankstelle.Tanks.Find(t => t.Bezeichnung == "Super98Tank");
+            bleifreiTank = tankstelle.Tanks.Find(t => t.Bezeichnung == "BleifreiTank");
+            BenzinPreisDiesel = diesel.getKostenproLiter();
+            BenzinPreisBleifrei = bleiFrei.getKostenproLiter();
+            BenzinPreisSuper98 = super98.getKostenproLiter();
             TankBestabdDiesel = dieselTank.GetLiterBestand();
             TankBestabdBleifrei = bleifreiTank.GetLiterBestand();
             TankBestabSuper98 = super98Tank.GetLiterBestand();
             this.tankstelle = tankstelle;
-            
+
         }
 
         double GasPrice;
-        
-        
 
-
-        private void SFr1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void SC1_Click(object sender, EventArgs e)
         {
             Close();
         }
-
+        //Wird ausgelöst wenn Diesel Geklickt wurder
         private void S1D_Click(object sender, EventArgs e)
         {
-            
+
             identifier = 1;
             S1B.Enabled = false;
             S198.Enabled = false;
@@ -72,63 +66,17 @@ namespace TankstellenPrg
             STT1.Start();
 
         }
-     
 
+        //Wenn Säule geladen wird wird Preis direkt Sichtbar angezeigt
         private void Säule1_Load(object sender, EventArgs e)
         {
-            SLT1.Text = Convert.ToString(Liter);
-            SFrT1.Text = Convert.ToString(Price);
-            S1D.Text = S1D.Text += "  " + gasPriceDiesel.ToString() +" "+ "CHF"+ " " + "pro/L";
-            S198.Text = S198.Text += "  " + gasPriceSuper98.ToString() + " " + "CHF" + " " + "pro/L";
-            S1B.Text = S1B.Text += "  " + gasPriceBleiFrei.ToString() + " " + "CHF" + " " + "pro/L";
+            SLT1.Text = Convert.ToString(liter);
+            SFrT1.Text = Convert.ToString(preis);
+            S1D.Text = S1D.Text += "  " + BenzinPreisDiesel.ToString() + " " + "CHF" + " " + "pro/L";
+            S198.Text = S198.Text += "  " + BenzinPreisSuper98.ToString() + " " + "CHF" + " " + "pro/L";
+            S1B.Text = S1B.Text += "  " + BenzinPreisBleifrei.ToString() + " " + "CHF" + " " + "pro/L";
         }
-
-        private void STT1_Tick(object sender, EventArgs e)
-        {
-            switch (identifier)
-            {
-                case 1:
-                    GasPrice = gasPriceDiesel / 10;
-                   
-                    break;
-                case 2:
-                    GasPrice = gasPriceBleiFrei / 10;
-                    
-                    break;
-                case 3:
-                    GasPrice = gasPriceSuper98 / 10;
-                    
-                    break;
-
-            }
-            Liter = Liter + 0.1;
-            Price += GasPrice;
-            SLT1.Text = Convert.ToString(Math.Round( Liter,1));
-            SFrT1.Text = Convert.ToString(Math.Round(Price,1));
-        }
-
-        private void SS1_Click(object sender, EventArgs e)
-        {
-            STT1.Stop();
-            SP1.Visible = true;
-            switch (identifier)
-            {
-                case 1:
-                    dieselTank.SetLiterBestand(TankBestabdDiesel -= Liter);
-                    identifier = 0;
-                    break;
-                case 2:
-                    bleifreiTank.SetLiterBestand(TankBestabdBleifrei -= Liter);
-                    identifier = 0;
-                    break;
-                case 3:
-                    super98Tank.SetLiterBestand(TankBestabSuper98 -= Liter);
-                    identifier = 0;
-                    break;
-
-            }
-        }
-
+        //Wird ausgelöst wenn Bleifrei Geklickt wurde
         private void S1B_Click(object sender, EventArgs e)
         {
             identifier = 2;
@@ -138,7 +86,7 @@ namespace TankstellenPrg
             SS1.Enabled = true;
             STT1.Start();
         }
-
+        //Wird ausgelöst wenn Super98 Geklickt wurde
         private void S198_Click(object sender, EventArgs e)
         {
             identifier = 3;
@@ -149,15 +97,64 @@ namespace TankstellenPrg
             STT1.Start();
         }
 
+        //Timer welche Hochzähtl und dazu noch ermittlet Welche Benzin Sorte geklickt wurde
+        private void STT1_Tick(object sender, EventArgs e)
+        {
+            switch (identifier)
+            {
+                case 1:
+                    GasPrice = BenzinPreisDiesel / 10;
 
-        
+                    break;
+                case 2:
+                    GasPrice = BenzinPreisBleifrei / 10;
 
+                    break;
+                case 3:
+                    GasPrice = BenzinPreisSuper98 / 10;
+
+                    break;
+
+            }
+            liter = liter + 0.1;
+            preis += GasPrice;
+            SLT1.Text = Convert.ToString(Math.Round(liter, 1));
+            SFrT1.Text = Convert.ToString(Math.Round(preis, 1));
+        }
+        //Stopt Den Tank Vorgang und zieht bezogene Liter Zahl vom Tank ab
+        private void SS1_Click(object sender, EventArgs e)
+        {
+            STT1.Stop();
+            SP1.Visible = true;
+            switch (identifier)
+            {
+                case 1:
+                    dieselTank.SetLiterBestand(TankBestabdDiesel -= liter);
+                    identifier = 0;
+                    break;
+                case 2:
+                    bleifreiTank.SetLiterBestand(TankBestabdBleifrei -= liter);
+                    identifier = 0;
+                    break;
+                case 3:
+                    super98Tank.SetLiterBestand(TankBestabSuper98 -= liter);
+                    identifier = 0;
+                    break;
+
+            }
+        }
+
+
+
+
+        //Löst Bezahlung aus -> Kasse erscheint
         private void SP1_Click(object sender, EventArgs e)
         {
-            
-            Payment Bezahlung = new Payment(Price,Liter,tankstelle);
+
+            Payment Bezahlung = new Payment(preis, liter, tankstelle);
             Bezahlung.Show();
             Close();
+
         }
     }
 }

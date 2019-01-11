@@ -91,7 +91,7 @@
             this.SFr1.Size = new System.Drawing.Size(33, 24);
             this.SFr1.TabIndex = 7;
             this.SFr1.Text = "Fr.";
-            this.SFr1.Click += new System.EventHandler(this.SFr1_Click);
+
             // 
             // SLT1
             // 
