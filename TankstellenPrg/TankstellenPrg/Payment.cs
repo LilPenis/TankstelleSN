@@ -120,67 +120,14 @@ namespace TankstellenPrg
 
             private void PB_Click_1(object sender, EventArgs e)
             {
-            double Rückgel = GetRückgeld(MyPay, Price);
+            
                 Receipt quittungg = new Receipt(Price,Liter,MyPay,tankstelle);
                 quittungg.Show();
                 Close();
                 
             }
 
-        private double GetRückgeld(int MyPay,double Price)
-        {
-            double rückgeld = Price - MyPay;
-            while (rückgeld > 0)
-            {
-                if (rückgeld > 100)
-                {
-
-                }
-                else if(rückgeld > 50)
-                {
-
-                }
-                else if (rückgeld > 20)
-                {
-
-                }
-                else if (rückgeld > 10)
-                {
-
-                }
-                else if (rückgeld > 5)
-                {
-
-                }
-                else if (rückgeld > 2)
-                {
-
-                }
-                else if (rückgeld > 1)
-                {
-
-                }
-                else if (rückgeld > 0.5)
-                {
-
-                }
-                else if (rückgeld > 0.2)
-                {
-
-                }
-                else if (rückgeld > 0.1)
-                {
-
-                }
-                else
-                {
-                    
-                }
-                
-
-            }
-            return rückgeld;
-        }
+        
     
 
 
